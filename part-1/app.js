@@ -13,7 +13,7 @@ function cameraStart() {
   navigator.mediaDevices
     .getUserMedia(constraints)
     .then(function (stream) {
-      alert(stream.getTracks());
+      alert(stream.getTracks().length + stream.getTracks()[0] + stream.getTracks()[1]);
       track = stream.getTracks()[0];
       cameraView.srcObject = stream;
     })
